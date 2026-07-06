@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mary Lynn Broe — Caroline Werner Gannett Professor of Humanities</title>
+  <meta name="description" content="The scholarship, books, courses, and life of Mary Lynn Broe — Caroline Werner Gannett Professor of Humanities at the Rochester Institute of Technology, editor and critic of Djuna Barnes, Sylvia Plath, and women's writing in exile.">
+  <link rel="canonical" href="https://mlbroe.com">
+
+  <meta property="og:title" content="Mary Lynn Broe">
+  <meta property="og:description" content="Scholar, editor, and poet. Caroline Werner Gannett Professor of Humanities, RIT — author on Djuna Barnes, Sylvia Plath, and women's writing in exile.">
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://mlbroe.com">
+  <meta property="og:image" content="https://mlbroe.com/images/portrait_main.jpg">
+  <meta property="og:site_name" content="Mary Lynn Broe">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mary Lynn Broe">
+  <meta name="twitter:description" content="Scholar, editor, and poet. Caroline Werner Gannett Professor of Humanities, RIT.">
+  <meta name="twitter:image" content="https://mlbroe.com/images/portrait_main.jpg">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mary Lynn Broe",
+    "url": "https://mlbroe.com",
+    "image": "https://mlbroe.com/images/portrait_main.jpg",
+    "jobTitle": "Caroline Werner Gannett Professor of Humanities",
+    "worksFor": {
+      "@type": "CollegeOrUniversity",
+      "name": "Rochester Institute of Technology"
+    },
+    "description": "Scholar, editor, and poet specializing in modernism, women's writing, Djuna Barnes, and Sylvia Plath.",
+    "alumniOf": ["University of Connecticut", "Saint Louis University"]
+  }
+  </script>
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%238C2F39'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' fill='%23F4F1EA' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #F4F1EA;
+      --white:     #FFFFFF;
+      --dark:      #1A1613;
+      --accent:    #8C2F39;
+      --accent-dk: #6E232C;
+      --muted:     #756E64;
+      --border:    #E1DCCF;
+      --dark-bg:   #17110F;
+
+      --serif: 'DM Serif Display', Georgia, 'Times New Roman', serif;
+      --sans:  'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+      --max-w:  1160px;
+      --pad-x:  clamp(24px, 5vw, 80px);
+      --nav-h:  68px;
+    }
+
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--dark);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      line-height: 1.6;
+    }
+
+    /* ─── NAV ─────────────────────────────────────────── */
+    #nav {
+      position: fixed; inset-block-start: 0; inset-inline: 0; z-index: 900;
+      height: var(--nav-h); padding: 0 var(--pad-x);
+      display: flex; align-items: center; justify-content: space-between;
+      transition: background 0.35s ease, border-color 0.35s ease, backdrop-filter 0.35s ease;
+      border-bottom: 1px solid transparent;
+    }
+    #nav.scrolled {
+      background: rgba(244, 241, 234, 0.92);
+      backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+      border-color: var(--border);
+    }
+    .nav-logo {
+      font-family: var(--serif); font-size: 18px; color: var(--dark);
+      text-decoration: none; letter-spacing: -0.01em;
+    }
+    .nav-links { display: flex; align-items: center; gap: 34px; list-style: none; }
+    .nav-links a {
+      font-size: 13.5px; font-weight: 500; letter-spacing: 0.02em;
+      color: var(--dark); text-decoration: none; opacity: 0.6; transition: opacity 0.2s;
+    }
+    .nav-links a:hover { opacity: 1; }
+    .nav-links .nav-btn {
+      opacity: 1; background: var(--dark); color: var(--white);
+      padding: 9px 20px; border-radius: 4px; transition: background 0.2s;
+    }
+    .nav-links .nav-btn:hover { background: var(--accent); }
+
+    .nav-hamburger {
+      display: none; flex-direction: column; gap: 5px; cursor: pointer;
+      padding: 6px; background: none; border: none;
+    }
+    .nav-hamburger span {
+      display: block; width: 22px; height: 1.5px; background: var(--dark);
+      transition: transform 0.25s, opacity 0.25s;
+    }
+    .nav-hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(4.5px, 4.5px); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(4.5px, -4.5px); }
+
+    .nav-mobile {
+      display: none; position: fixed; top: var(--nav-h); inset-inline: 0;
+      background: var(--bg); border-bottom: 1px solid var(--border);
+      padding: 24px var(--pad-x) 32px; flex-direction: column; gap: 20px; z-index: 899;
+    }
+    .nav-mobile.open { display: flex; }
+    .nav-mobile a { font-size: 18px; font-weight: 400; color: var(--dark); text-decoration: none; opacity: 0.75; }
+    .nav-mobile a:hover { opacity: 1; }
+
+    /* ─── SECTION SHELL ──────────────────────────────── */
+    .s-inner { max-width: var(--max-w); margin: 0 auto; padding: 0 var(--pad-x); }
+    .s-label {
+      font-size: 11.5px; font-weight: 600; letter-spacing: 0.13em;
+      text-transform: uppercase; color: var(--accent); margin-bottom: 18px;
+    }
+    .s-headline {
+      font-family: var(--serif); font-size: clamp(34px, 5vw, 54px);
+      line-height: 1.1; letter-spacing: -0.025em;
+    }
+
+    /* ─── HERO ───────────────────────────────────────── */
+    #hero {
+      min-height: 100svh; background: var(--bg);
+      display: flex; align-items: center;
+      padding-top: calc(var(--nav-h) + 40px); padding-bottom: clamp(48px, 8vh, 90px);
+    }
+    .hero-inner {
+      max-width: var(--max-w); margin: 0 auto; padding: 0 var(--pad-x);
+      display: grid; grid-template-columns: 1.15fr 0.85fr; gap: clamp(40px, 6vw, 84px);
+      align-items: center; width: 100%;
+    }
+    .hero-eyebrow {
+      font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 28px;
+    }
+    .hero-h1 {
+      font-family: var(--serif); font-size: clamp(46px, 7vw, 88px);
+      line-height: 1.0; letter-spacing: -0.03em; margin-bottom: 26px;
+    }
+    .hero-title {
+      font-size: clamp(16px, 2vw, 19px); font-weight: 400; color: var(--dark);
+      line-height: 1.5; margin-bottom: 30px; max-width: 460px;
+    }
+    .hero-quote {
+      font-family: var(--serif); font-style: italic;
+      font-size: clamp(17px, 2vw, 21px); line-height: 1.5; color: var(--accent-dk);
+      border-left: 2px solid var(--accent); padding-left: 20px; margin-bottom: 40px; max-width: 460px;
+    }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px; padding: 15px 28px;
+      border-radius: 4px; font-family: var(--sans); font-size: 14.5px; font-weight: 500;
+      text-decoration: none; letter-spacing: 0.01em;
+      transition: background 0.2s, border-color 0.2s, transform 0.15s, color 0.2s; cursor: pointer;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-dark { background: var(--dark); color: var(--white); border: 1px solid var(--dark); }
+    .btn-dark:hover { background: var(--accent); border-color: var(--accent); }
+    .btn-outline { background: transparent; color: var(--dark); border: 1px solid var(--border); }
+    .btn-outline:hover { border-color: var(--dark); }
+
+    .hero-portrait {
+      position: relative; justify-self: center;
+    }
+    .hero-portrait img {
+      width: 100%; max-width: 340px; height: auto; display: block;
+      border-radius: 6px; box-shadow: 0 24px 60px rgba(26,22,19,0.22);
+    }
+    .hero-portrait::before {
+      content: ""; position: absolute; inset: 16px -16px -16px 16px;
+      border: 1px solid var(--accent); border-radius: 6px; z-index: -1;
+    }
+    .hero-motto {
+      margin-top: 18px; text-align: center; font-family: var(--serif); font-style: italic;
+      font-size: 14px; color: var(--muted);
+    }
+
+    /* ─── BIOGRAPHY ──────────────────────────────────── */
+    #biography {
+      background: var(--white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      padding: clamp(72px, 11vw, 130px) 0;
+    }
+    .bio-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(48px, 8vw, 96px); align-items: start; }
+    .bio-pull {
+      font-family: var(--serif); font-size: clamp(26px, 3.6vw, 40px); line-height: 1.24;
+      letter-spacing: -0.02em; position: sticky; top: calc(var(--nav-h) + 32px);
+    }
+    .bio-pull em { font-style: italic; color: var(--accent); }
+    .bio-body p { font-size: 16px; color: var(--muted); line-height: 1.85; margin-bottom: 22px; }
+    .bio-body p:last-child { margin-bottom: 0; }
+    .bio-body strong { color: var(--dark); font-weight: 600; }
+
+    .creds { margin-top: 44px; padding-top: 40px; border-top: 1px solid var(--border);
+      display: flex; flex-direction: column; gap: 22px; }
+    .cred-row { display: grid; grid-template-columns: 96px 1fr; gap: 20px; align-items: baseline; }
+    .cred-label { font-size: 12px; font-weight: 600; color: var(--accent); letter-spacing: 0.06em; text-transform: uppercase; }
+    .cred-val { font-size: 14.5px; color: var(--muted); line-height: 1.7; }
+    .cred-val b { color: var(--dark); font-weight: 600; }
+
+    /* ─── BOOKS ──────────────────────────────────────── */
+    #books { background: var(--bg); padding: clamp(72px, 11vw, 130px) 0; }
+    .books-head { margin-bottom: 56px; }
+    .book { display: grid; grid-template-columns: 150px 1fr; gap: clamp(28px, 4vw, 56px);
+      padding: 44px 0; border-top: 1px solid var(--border); align-items: start; }
+    .book:last-child { border-bottom: 1px solid var(--border); }
+    .book-cover img {
+      width: 100%; height: auto; display: block; border-radius: 3px;
+      box-shadow: 0 12px 30px rgba(26,22,19,0.18);
+    }
+    .book-title { font-family: var(--serif); font-size: clamp(24px, 3vw, 32px); line-height: 1.15;
+      letter-spacing: -0.02em; margin-bottom: 8px; }
+    .book-title em { font-style: italic; }
+    .book-meta { font-size: 13.5px; color: var(--accent); font-weight: 500; margin-bottom: 20px; letter-spacing: 0.01em; }
+    .book-desc { font-size: 15.5px; color: var(--muted); line-height: 1.8; margin-bottom: 20px; }
+    .book-desc:last-child { margin-bottom: 0; }
+    .book-quote {
+      font-size: 14px; color: var(--dark); line-height: 1.75; font-style: italic;
+      border-left: 2px solid var(--border); padding-left: 18px; margin-bottom: 16px;
+    }
+    .book-quote cite { display: block; font-style: normal; font-size: 12.5px; color: var(--muted); margin-top: 6px; }
+
+    /* ─── SCHOLARSHIP ───────────────────────────────── */
+    #scholarship { background: var(--dark-bg); padding: clamp(72px, 11vw, 130px) 0; }
+    #scholarship .s-label { color: rgba(255,255,255,0.4); }
+    #scholarship .s-headline { color: var(--white); }
+    .schol-head { margin-bottom: 56px; }
+    .schol-block { padding-top: 48px; margin-top: 48px; border-top: 1px solid rgba(255,255,255,0.1); }
+    .schol-block:first-of-type { border-top: none; padding-top: 0; margin-top: 40px; }
+    .schol-block h3 {
+      font-family: var(--serif); font-size: 22px; color: var(--white);
+      letter-spacing: 0.01em; margin-bottom: 26px;
+    }
+    .schol-list { list-style: none; display: flex; flex-direction: column; gap: 18px; }
+    .schol-list li {
+      font-size: 14.5px; color: rgba(255,255,255,0.62); line-height: 1.7;
+      padding-left: 22px; position: relative;
+    }
+    .schol-list li::before { content: "—"; position: absolute; left: 0; color: var(--accent); }
+    .schol-list li b, .schol-list li em { color: rgba(255,255,255,0.9); }
+    .schol-list li em { font-style: italic; }
+    .schol-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 48px; }
+    @media (max-width: 760px) { .schol-cols { grid-template-columns: 1fr; } }
+
+    /* ─── COURSES ────────────────────────────────────── */
+    #courses { background: var(--bg); padding: clamp(72px, 11vw, 130px) 0; }
+    .courses-head { margin-bottom: 56px; }
+    .course-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--border);
+      border: 1px solid var(--border); }
+    .course-card { background: var(--white); padding: 40px 36px; transition: background 0.2s; }
+    .course-card:hover { background: #FAF8F2; }
+    .course-num { font-size: 11px; font-weight: 600; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 20px; }
+    .course-title { font-family: var(--serif); font-size: 24px; line-height: 1.2; letter-spacing: -0.015em; margin-bottom: 6px; }
+    .course-code { font-size: 12.5px; color: var(--muted); margin-bottom: 18px; letter-spacing: 0.04em; }
+    .course-desc { font-size: 14.5px; color: var(--muted); line-height: 1.75; }
+
+    /* ─── GALLERY ────────────────────────────────────── */
+    #gallery { background: var(--white); border-top: 1px solid var(--border); padding: clamp(72px, 11vw, 130px) 0; }
+    .gallery-head { margin-bottom: 48px; }
+    .gallery-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: 240px; gap: 14px;
+    }
+    .gallery-grid figure {
+      overflow: hidden; border-radius: 5px; position: relative; background: var(--bg);
+    }
+    .gallery-grid img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+      transition: transform 0.5s ease; filter: saturate(0.96);
+    }
+    .gallery-grid figure:hover img { transform: scale(1.05); }
+    .gallery-grid figcaption {
+      position: absolute; inset-block-end: 0; inset-inline: 0;
+      padding: 30px 16px 12px; font-size: 12.5px; color: var(--white);
+      background: linear-gradient(to top, rgba(0,0,0,0.55), transparent);
+      opacity: 0; transition: opacity 0.3s; letter-spacing: 0.02em;
+    }
+    .gallery-grid figure:hover figcaption { opacity: 1; }
+    .g-tall { grid-row: span 2; }
+
+    /* ─── CONTACT ────────────────────────────────────── */
+    #contact { background: var(--bg); padding: clamp(72px, 11vw, 130px) 0; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(40px, 6vw, 80px); align-items: start; }
+    .contact-h2 { font-family: var(--serif); font-size: clamp(40px, 6vw, 68px); line-height: 1.02;
+      letter-spacing: -0.03em; margin-bottom: 24px; }
+    .contact-h2 em { font-style: italic; color: var(--accent); }
+    .contact-sub { font-size: 16px; color: var(--muted); line-height: 1.8; margin-bottom: 28px; max-width: 440px; }
+    .contact-card { background: var(--white); border: 1px solid var(--border); border-radius: 6px; padding: 40px 36px; }
+    .contact-row { padding: 16px 0; border-bottom: 1px solid var(--border); }
+    .contact-row:last-child { border-bottom: none; padding-bottom: 0; }
+    .contact-row:first-child { padding-top: 0; }
+    .contact-key { font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
+    .contact-line { font-size: 15px; color: var(--dark); line-height: 1.6; }
+    .contact-line a { color: var(--accent); text-decoration: none; }
+    .contact-line a:hover { text-decoration: underline; }
+
+    /* ─── FOOTER ─────────────────────────────────────── */
+    footer { background: var(--dark-bg); padding: 40px var(--pad-x); }
+    .footer-inner { max-width: var(--max-w); margin: 0 auto; display: flex; align-items: center;
+      justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+    .footer-logo { font-family: var(--serif); font-size: 16px; color: rgba(255,255,255,0.7); text-decoration: none; }
+    .footer-motto { font-size: 12.5px; color: rgba(255,255,255,0.35); font-style: italic; font-family: var(--serif); }
+    .footer-copy { font-size: 12.5px; color: rgba(255,255,255,0.3); }
+
+    /* ─── FADE-IN ────────────────────────────────────── */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.65s ease, transform 0.65s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+
+    /* ─── RESPONSIVE ─────────────────────────────────── */
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+      .hero-inner { grid-template-columns: 1fr; gap: 48px; }
+      .hero-portrait { order: -1; }
+      .hero-portrait img { max-width: 260px; }
+      .bio-grid { grid-template-columns: 1fr; }
+      .bio-pull { position: static; }
+      .book { grid-template-columns: 110px 1fr; }
+      .course-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 200px; }
+      .g-tall { grid-row: span 1; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .footer-inner { flex-direction: column; text-align: center; }
+    }
+    @media (max-width: 520px) {
+      :root { --pad-x: 20px; }
+      .hero-actions { flex-direction: column; align-items: stretch; }
+      .btn { width: 100%; justify-content: center; }
+      .book { grid-template-columns: 1fr; }
+      .book-cover { max-width: 140px; }
+      .gallery-grid { grid-template-columns: 1fr; }
+      .cred-row { grid-template-columns: 1fr; gap: 4px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <a href="#hero" class="nav-logo">Mary Lynn Broe</a>
+    <ul class="nav-links">
+      <li><a href="#biography">Biography</a></li>
+      <li><a href="#books">Books</a></li>
+      <li><a href="#scholarship">Scholarship</a></li>
+      <li><a href="#courses">Courses</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact" class="nav-btn">Contact</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </nav>
+  <div class="nav-mobile" id="navMobile">
+    <a href="#biography">Biography</a>
+    <a href="#books">Books</a>
+    <a href="#scholarship">Scholarship</a>
+    <a href="#courses">Courses</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <p class="hero-eyebrow">Scholar · Editor · Poet</p>
+        <h1 class="hero-h1">Mary Lynn<br>Broe</h1>
+        <p class="hero-title">Caroline Werner Gannett Professor of Humanities, Rochester Institute of Technology.</p>
+        <blockquote class="hero-quote">"Anonymous was <em>not a woman.</em> Either Squirrel-Tooth Alice, or Belle Starr."</blockquote>
+        <div class="hero-actions">
+          <a href="#books" class="btn btn-dark">Explore the books →</a>
+          <a href="#biography" class="btn btn-outline">Biography</a>
+        </div>
+      </div>
+      <div class="hero-portrait-wrap">
+        <div class="hero-portrait">
+          <img src="images/portrait_main.jpg" alt="Portrait of Mary Lynn Broe">
+        </div>
+        <p class="hero-motto">"Acti Labores Jucundi" — Cicero</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BIOGRAPHY -->
+  <section id="biography">
+    <div class="s-inner">
+      <p class="s-label reveal">Biography</p>
+      <div class="bio-grid">
+        <div>
+          <p class="bio-pull reveal">A scholar of modernism, exile, and the <em>lives women wrote</em> — and did not get to write.</p>
+        </div>
+        <div class="bio-body reveal">
+          <p>Mary Lynn Broe is the <strong>Caroline Werner Gannett Professor of Humanities</strong> at the Rochester Institute of Technology, an appointment created to explore the intersections of the humanities with the social sciences, sciences, and technology — both across campus and nationally.</p>
+          <p>Across three decades she has been one of the defining voices in the recovery and reevaluation of women modernists. Her landmark volumes on <strong>Djuna Barnes</strong> and <strong>Sylvia Plath</strong>, and her pathbreaking work on women's writing in exile, reshaped how a generation of readers understood the archive, the family, and the politics of the page.</p>
+          <p>Before RIT she held the <strong>Louise R. Noun Endowed Chair in Women's Studies and English at Grinnell College</strong> for sixteen years, where she introduced gender and women's studies into the liberal arts curriculum, and taught earlier at SUNY-Binghamton and the University of Notre Dame. Her scholarship has been carried on fellowships from the Getty, the Ford and Rockefeller Foundations, the NEH, and the ACLS.</p>
+          <p>She is also a working poet. As she puts it in <em>"Introit"</em>: <em>"I write heartbreak torch songs, full of / Unabashed yearning. Also / Celtic rants… / No one hearing my poetry / Would ever mistake / Improvisation / For metric calisthenics."</em></p>
+
+          <div class="creds">
+            <div class="cred-row">
+              <span class="cred-label">Education</span>
+              <span class="cred-val"><b>Ph.D.</b>, University of Connecticut, 1976 (with distinction; NDEA Title IV Fellow) · <b>M.A.</b>, University of Connecticut, 1970 · <b>A.B.</b>, Saint Louis University, 1967 (magna cum laude)</span>
+            </div>
+            <div class="cred-row">
+              <span class="cred-label">Chairs</span>
+              <span class="cred-val">Caroline Werner Gannett Professor of Humanities, RIT (2006–) · Chair, Dept. of Language &amp; Literature, RIT (2002–2005) · Louise R. Noun Endowed Chair, Grinnell College (1986–2002)</span>
+            </div>
+            <div class="cred-row">
+              <span class="cred-label">Fields</span>
+              <span class="cred-val">Modernism · women's writing &amp; exile · Djuna Barnes · Sylvia Plath · autobiography &amp; life-writing · maps, space &amp; place · poetry</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKS -->
+  <section id="books">
+    <div class="s-inner">
+      <div class="books-head">
+        <p class="s-label reveal">Books</p>
+        <h2 class="s-headline reveal reveal-delay-1">Selected volumes</h2>
+      </div>
+
+      <div class="book reveal">
+        <div class="book-cover"><img src="images/books/silence_and_power.jpg" alt="Silence and Power book cover"></div>
+        <div>
+          <h3 class="book-title"><em>Silence and Power: A Reevaluation of Djuna Barnes</em></h3>
+          <p class="book-meta">London &amp; Carbondale: Southern Illinois University Press, 1991 · Editor</p>
+          <p class="book-desc">The most important volume to date on Djuna Barnes — more than a collection of criticism, it captures the eclectic character of the woman herself, with personal reminiscences, previously unpublished letters, scattered memoirs, and abundant prints of Barnes's sketches and paintings.</p>
+          <blockquote class="book-quote">"…the most important volume to date on Djuna Barnes… It includes abundant, well-selected photographs and prints of Barnes's sketches and paintings, which clarify the essays."<cite>Bonnie Kime Scott, <em>Signs</em>, Winter 1993</cite></blockquote>
+          <blockquote class="book-quote">"These essays, lightning bolts and laser beams of critical intelligence, will cauterize and change our perceptions of Barnes and cultural modernism."<cite>Catharine Stimpson, from the Afterword</cite></blockquote>
+        </div>
+      </div>
+
+      <div class="book reveal">
+        <div class="book-cover"><img src="images/books/womens_writing_in_exile.jpg" alt="Women's Writing in Exile book cover"></div>
+        <div>
+          <h3 class="book-title"><em>Women's Writing in Exile</em></h3>
+          <p class="book-meta">Chapel Hill: University of North Carolina Press, 1989 · Co-edited with Angela Ingram</p>
+          <p class="book-desc">Sixteen essays exploring the varieties of exile women writers in Western culture have experienced over the last hundred years — exile both geographic and imposed, as much metaphor as material circumstance — on Djuna Barnes, H.D., Alice Walker, Isak Dinesen, Jean Rhys, Nadine Gordimer, Doris Lessing, Sylvia Townsend Warner, and Virginia Woolf. The volume includes Broe's pathbreaking essay, "My Art Belongs to Daddy: The Textual Economics of Hayford Hall."</p>
+          <blockquote class="book-quote">"Rooted in evocations of struggle, this work proposes 'exile' as a political reality and a political metaphor… A striking, salutary collection for feminist scholarship in its historical and cultural reconsideration of modernism."<cite>Rachel Blau DuPlessis, Temple University</cite></blockquote>
+        </div>
+      </div>
+
+      <div class="book reveal">
+        <div class="book-cover"><img src="images/books/protean_poetic.jpg" alt="Protean Poetic book cover"></div>
+        <div>
+          <h3 class="book-title"><em>Protean Poetic: The Poetry of Sylvia Plath</em></h3>
+          <p class="book-meta">London &amp; Columbia, MO: University of Missouri Press, 1980</p>
+          <p class="book-desc">An early, career-spanning study that reads Plath beyond the "confessional" label, attending to the work rather than the life and death. Excerpts reprinted in <em>Sylvia Plath: Modern Critical Views</em>, ed. Harold Bloom (Chelsea House, 1989), and in <em>Making Literature Matter</em>, ed. Schilb &amp; Clifford (St. Martin's/Bedford, 2006).</p>
+        </div>
+      </div>
+
+      <div class="book reveal">
+        <div class="book-cover"><img src="images/books/camminare_nel_buio.jpg" alt="Camminare nel Buio book cover"></div>
+        <div>
+          <h3 class="book-title"><em>Camminare nel Buio</em> <span style="font-style:normal;">(Black Walking)</span></h3>
+          <p class="book-meta">Selected Letters of Djuna Barnes to Emily Holmes Coleman, 1934–38 · Archinto, Milan, 2004 · German edition: <em>Im Dunkeln gehn</em>, Klaus Wagenbach, Berlin, 2002 · English edition forthcoming</p>
+          <p class="book-desc">The selected correspondence between Djuna Barnes and Emily Holmes Coleman across the crucial years 1934–38 — a window onto New York, London, and Paris, and onto the completion of Barnes's most famous work, <em>Nightwood</em>. A record of two brilliant, complicated women who gave each other license to search the depths of the intimate.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCHOLARSHIP -->
+  <section id="scholarship">
+    <div class="s-inner">
+      <div class="schol-head">
+        <p class="s-label reveal">Scholarship</p>
+        <h2 class="s-headline reveal reveal-delay-1">Essays, papers &amp; grants</h2>
+      </div>
+
+      <div class="schol-block reveal">
+        <h3>Selected Essays &amp; Interviews</h3>
+        <ul class="schol-list">
+          <li>Filmed interview for <em>"Sleep in a Nest of Flames: The Worlds of Charles Henri Ford,"</em> Symbiosis Films, New York City, 2000–01.</li>
+          <li>"Plathologies: The Blood Jet is Bucks, Not Poetry," 10th Anniversary Essay, <em>Belles Lettres</em> 10.1 (Fall 1995); reprinted as "Dead Letter File: The Selling and Selling Out of Sylvia Plath," <em>Small Press Magazine</em> (Winter 1995).</li>
+          <li>"'Yes, no, peut-être': Caresse Crosby After The Black Sun Set," in <em>A Living of Words: American Women in Print Culture</em>, ed. Susan Albertine (University of Tennessee Press, 1995).</li>
+          <li>"'…a love from back of the heart': The Story Djuna Wrote for Charles Henri," <em>The Review of Contemporary Fiction</em> 13.3 (Fall 1993).</li>
+          <li>Chapter on Djuna Barnes, <em>The Gender of Modernism</em>, ed. Bonnie Kime Scott (Indiana University Press, 1990).</li>
+          <li>"My Art Belongs to Daddy: Incest as Exile — The Textual Economics of Hayford Hall," in <em>Women's Writing in Exile</em> (University of North Carolina Press, 1989).</li>
+          <li>"'Enigmatic, Shifting My Clarities': The Poetic Career of Sylvia Plath," in <em>Ariel Ascending</em>, ed. Paul Alexander (Harper &amp; Row, 1985).</li>
+          <li>"Whiteman in the Woodpile: John Berryman's Burnt Cork Poetic," <em>American Poetry</em> 1.2 (Winter 1984).</li>
+          <li>"'A Common and Acute Particularity': The Radical Wisdom of Adrienne Rich," <em>Journal of Educational Thought</em> 17.2 (August 1983).</li>
+          <li>"Bohemia Bumps Into Calvin: The Deceptive Drama of Lillian Hellman," <em>The Southern Quarterly</em> 19.2 (Winter 1981); reprinted in <em>Critical Essays on Lillian Hellman</em>, ed. Mark Estrin (G.K. Hall, 1989).</li>
+          <li>"Recovering the Complex Self: Sylvia Plath's Beeline," <em>The Centennial Review</em> 24.1 (Winter 1980).</li>
+          <li>"A Subtle Psychic Bond: Sylvia and Aurelia Schober Plath in Letters Home," in <em>The Lost Tradition: Mothers and Daughters in Literature</em> (Frederick Ungar, 1980).</li>
+          <li>"'Oh Dad, Poor Dad': Another Look at Sylvia Plath's 'Daddy,'" <em>Notes on Contemporary Literature</em> 9.4 (1979).</li>
+          <li>"Demythologizing Sivvy: That 'Theatrical Comeback in Broad Day,'" <em>Poet and Critic</em> 10.1 (1977).</li>
+        </ul>
+      </div>
+
+      <div class="schol-block reveal">
+        <h3>Selected Papers &amp; Lectures</h3>
+        <ul class="schol-list">
+          <li>Organized Panel &amp; Paper, "Moving Out/There: Strategies for Re-Imagining Academic Spaces," <em>Defining Space</em>, University College Dublin, 2007.</li>
+          <li>"Biting Off Too Much Sky?" — <em>Not Drowning but Waving: Women, Feminism and the Liberal Arts</em>, University of Alberta, 2006.</li>
+          <li>"Beyond 'verbal privilege': Negotiating the Transformative Politics in Adrienne Rich's Poetry," Poetry and Politics Conference, University of Stirling, Scotland, 2006.</li>
+          <li>"Evolving Cartographies: Moving Beyond Literary and Textualized Spaces," 4th European Conference of the Society for Science, Literature and the Arts, Amsterdam, 2006.</li>
+          <li>"Gesturing with Love, Touching into Words: The Geographical Imagination of Michael Ondaatje," Triennial World Conference of ACLALS, University of Malta, 2005.</li>
+          <li>"Celebrating the Radical Poetics of Medbh McGuckian," <em>Representing Ireland</em>, University of Sunderland, 2003.</li>
+          <li>"Rifts, Partitions, and 'the mineral taste of lust': Akhil Sharma's An Obedient Father," Bodies and Voices Conference, University of Copenhagen, 2002.</li>
+          <li>"Alternative Salons and Spoiled Careers: Djuna Barnes at Hayford Hall," Special Session, Modern Language Association, New York, 1992.</li>
+          <li>"Gentle Geomorphologies: Nomadism and Community in Michael Ondaatje's The English Patient," 'City Limits' Conference, University of Staffordshire, 1996.</li>
+          <li>"'Case history makes me sick': The Epistolary Collaborations of Djuna Barnes and Emily Holmes Coleman," MLA, San Francisco, 1987.</li>
+          <li>"White Pine Minds with Mahogany Finish: Reading the Rhetoric of the Family in the Djuna Barnes Archive," USC, Los Angeles, 1987.</li>
+          <li>"The Art of Revision and the Ache of the Academy: Researching Djuna Barnes," Sixth Berkshire Conference in the History of Women, Smith College, 1984.</li>
+        </ul>
+      </div>
+
+      <div class="schol-block reveal">
+        <h3>Selected Fellowships &amp; Grants</h3>
+        <div class="schol-cols">
+          <ul class="schol-list">
+            <li><b>1998</b> — Research Grant, Getty Research Institute, Santa Monica.</li>
+            <li><b>1992–93</b> — Ford Foundation Grant, International Seminar: "Film as Text: Nationhood, the Nomadic and the Fate of Colonial Practices."</li>
+            <li><b>1990–91, 1982</b> — ACLS Grants-in-Aid (Research on Djuna Barnes at Hayford Hall).</li>
+            <li><b>1984–85</b> — Canadian Embassy Award ("The Canadian Woman Writer").</li>
+          </ul>
+          <ul class="schol-list">
+            <li><b>1984</b> — NEH Travel-to-Collections Grant.</li>
+            <li><b>1982</b> — Rockefeller Foundation Residency, Villa Serbelloni, Bellagio, Italy.</li>
+            <li><b>1981</b> — NEH Summer Fellowship.</li>
+            <li><b>1979–83</b> — SUNY Foundation Grants, including Junior Faculty Research Award, Curriculum Development Grants, and Summer Fellowships.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COURSES -->
+  <section id="courses">
+    <div class="s-inner">
+      <div class="courses-head">
+        <p class="s-label reveal">Courses</p>
+        <h2 class="s-headline reveal reveal-delay-1">A selection of courses</h2>
+      </div>
+      <div class="course-grid">
+        <div class="course-card reveal">
+          <p class="course-num">01</p>
+          <h3 class="course-title">Autobiography: Outlaw Narratives</h3>
+          <p class="course-code">0504-490-01</p>
+          <p class="course-desc">We live, said James Merrill, in the age of "me-moir." This course explores the quarrel between truth and fiction across a rich spectrum of life-writings — from formal autobiography to "outlaw" narratives, diaries, ethnographies, and visual self-portraits in art, photography, and film — tracing new modes of constructing identity across race, nation, class, and gender.</p>
+        </div>
+        <div class="course-card reveal reveal-delay-1">
+          <p class="course-num">02</p>
+          <h3 class="course-title">Maps, Spaces and Places</h3>
+          <p class="course-code">504-493-01</p>
+          <p class="course-desc">Space speaks. Beginning with a meditation on the language of maps — antique and digital — the course explores the idea that to tell a useful and truthful picture, an accurate map must tell lies. It treats spatial thinking as critical across the STEM disciplines and culminates in a project reading "RIT or Rochester as Text."</p>
+        </div>
+        <div class="course-card reveal">
+          <p class="course-num">03</p>
+          <h3 class="course-title">The Novel: Banned, Burned &amp; Transgressive</h3>
+          <p class="course-code">0504-443-01</p>
+          <p class="course-desc">The origin and rise of "the novel" alongside the censorship history of creative works over four centuries — from Milton's <em>Areopagitica</em> and Galileo's <em>Dialogue</em> through Joyce's <em>Ulysses</em>, Henry Miller, and Rushdie's <em>Satanic Verses</em> — with visual materials by Cadmus, Mapplethorpe, and others.</p>
+        </div>
+        <div class="course-card reveal reveal-delay-1">
+          <p class="course-num">04</p>
+          <h3 class="course-title">The Art of Poetry</h3>
+          <p class="course-code">0504-441-01</p>
+          <p class="course-desc">From formal verse to online, performance, and hip-hop poetry — Hopkins and Hardy to the confessionals, contemporary women poets, and environmental poets. The aim: to read for "the world within the word," to learn interpretive strategies that bring pleasure and social awareness, and to move poetry outside the classroom.</p>
+        </div>
+        <div class="course-card reveal">
+          <p class="course-num">05</p>
+          <h3 class="course-title">New Cartographies: Interdisciplinary Negotiations</h3>
+          <p class="course-code">COLA 0520 / COS 1055 · Caroline Werner Gannett Project</p>
+          <p class="course-desc">As digital mapping evolves, mapmaking begins to emphasize features as an artist might paint a picture. Working across environmental and imaging sciences, art, and literature, the course opens an interdisciplinary "contact zone" exploring how maps generate creativity and cultural change.</p>
+        </div>
+        <div class="course-card reveal reveal-delay-1">
+          <p class="course-num">06</p>
+          <h3 class="course-title">Truth and Consequences: Disciplinary Evidence</h3>
+          <p class="course-code">COS / COLA · Caroline Werner Gannett Project</p>
+          <p class="course-desc">A cross-disciplinary look at what evidence <em>is</em> — and how it is collected, sifted, evaluated, and preserved across legal, criminal, historical, scientific, journalistic, medical, geographic, and aesthetic realms. Over a dozen RIT and visiting faculty shape the questions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery">
+    <div class="s-inner">
+      <div class="gallery-head">
+        <p class="s-label reveal">Gallery</p>
+        <h2 class="s-headline reveal reveal-delay-1">Life beyond the page</h2>
+      </div>
+      <div class="gallery-grid reveal">
+        <figure class="g-tall">
+          <img src="images/portrait_gallery.jpg" alt="Mary Lynn Broe at a gathering">
+          <figcaption>Among the paintings</figcaption>
+        </figure>
+        <figure>
+          <img src="images/gallery/dogs_lawn.jpg" alt="Mary Lynn Broe with her Irish setters on the lawn">
+          <figcaption>With the setters</figcaption>
+        </figure>
+        <figure>
+          <img src="images/gallery/porch.jpg" alt="On the porch">
+          <figcaption>On the porch</figcaption>
+        </figure>
+        <figure>
+          <img src="images/portrait_dogs.jpg" alt="Mary Lynn Broe running agility with an Irish setter">
+          <figcaption>Agility in the yard</figcaption>
+        </figure>
+        <figure class="g-tall">
+          <img src="images/gallery/dogs_autumn.jpg" alt="Mary Lynn Broe with her dogs among autumn leaves">
+          <figcaption>Autumn, with the dogs</figcaption>
+        </figure>
+        <figure>
+          <img src="images/gallery/dinner.jpg" alt="At dinner">
+          <figcaption>At the table</figcaption>
+        </figure>
+        <figure>
+          <img src="images/gallery/nephew.jpg" alt="With family">
+          <figcaption>Family</figcaption>
+        </figure>
+        <figure>
+          <img src="images/gallery/dogs_leaves.jpg" alt="With a setter among the leaves">
+          <figcaption>Good company</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="s-inner">
+      <div class="contact-grid">
+        <div class="reveal">
+          <h2 class="contact-h2">Get in<br><em>touch.</em></h2>
+          <p class="contact-sub">For scholarship, correspondence, permissions, or inquiries about Mary Lynn Broe's work and archive.</p>
+        </div>
+        <div class="contact-card reveal reveal-delay-1">
+          <div class="contact-row">
+            <p class="contact-key">Email</p>
+            <p class="contact-line"><a href="mailto:mlbgsl@rit.edu">mlbgsl@rit.edu</a></p>
+          </div>
+          <div class="contact-row">
+            <p class="contact-key">Department</p>
+            <p class="contact-line">College of Liberal Arts — #3179 Eastman Building<br>Rochester Institute of Technology<br>92 Lomb Memorial Drive<br>Rochester, NY 14623-5604</p>
+          </div>
+          <div class="contact-row">
+            <p class="contact-key">Telephone</p>
+            <p class="contact-line">(585) 475-7174 · Fax (585) 475-5777</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <a href="#hero" class="footer-logo">Mary Lynn Broe</a>
+      <span class="footer-motto">"Acti Labores Jucundi" — Cicero</span>
+      <span class="footer-copy">© <span id="year"></span> Mary Lynn Broe</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const nav = document.getElementById('nav');
+    const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 30);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    const hamburger = document.getElementById('hamburger');
+    const navMobile = document.getElementById('navMobile');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      navMobile.classList.toggle('open');
+    });
+    navMobile.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      navMobile.classList.remove('open');
+    }));
+
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const id = a.getAttribute('href');
+        const target = document.querySelector(id);
+        if (target) {
+          e.preventDefault();
+          const offset = target.getBoundingClientRect().top + window.scrollY - 20;
+          window.scrollTo({ top: offset, behavior: 'smooth' });
+        }
+      });
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(en => {
+        if (en.isIntersecting) { en.target.classList.add('visible'); observer.unobserve(en.target); }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
