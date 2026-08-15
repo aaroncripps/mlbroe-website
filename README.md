@@ -19,13 +19,6 @@ DEPLOY.md           Step-by-step deployment guide
 
 Hero · Biography · Books · Scholarship (essays, papers, grants) · Courses · Gallery · Contact
 
-## Content notes
-
-All copy, images, and content were migrated from the original site. Contact details
-(RIT email, department address, phone) are carried over from the original site and may
-need updating. The original home-page portrait (`mlb1.jpg`) was missing from the source
-files, so `broe_main.jpg` is used as the hero portrait.
-
 ## Editing
 
 Everything lives in `index.html`. Edit text or styles there and re-commit; GitHub Pages
