@@ -147,6 +147,10 @@
     .contrib { font-size:13.5px; color:var(--muted); line-height:1.75; }
     .books-closer { margin:clamp(40px,6vh,64px) auto 0; text-align:center; max-width:460px; }
     .books-closer img { width:100%; height:auto; display:block; border-radius:6px; box-shadow:0 14px 34px rgba(26,22,19,.18); }
+    .books-closer-row { margin:clamp(40px,6vh,64px) auto 0; display:flex; align-items:flex-start; justify-content:center; gap:20px; flex-wrap:wrap; }
+    .books-closer-row figure { margin:0; }
+    .books-closer-row img { height:280px; width:auto; max-width:100%; display:block; border-radius:6px; box-shadow:0 14px 34px rgba(26,22,19,.18); }
+    @media (max-width:520px){ .books-closer-row img { height:200px; } }
 
     /* ENTRY LISTS */
     .entry-list { list-style:none; display:flex; flex-direction:column; gap:18px; max-width:880px; }
@@ -291,6 +295,15 @@
         <p>In addition to recently published poetry, essays on modernist poets, playwrights, fiction writers and multimedia artist Charles Henri Ford, my books include: <em>Protean Poetic: The Poetry of Sylvia Plath</em> (U. Missouri, 1980); co-edited <em>Women's Writing in Exile</em> (U. North Carolina, 1989); edited <em>Silence and Power: A Reevaluation of Djuna Barnes</em> (Southern Illinois U. Press, 1991); and my selection of letters from two American expatriates, <em>Black Walking: Selected Letters of Djuna Barnes to Emily Holmes Coleman, 1934-38,</em> published by Wagenbach (<em>Im Dunkeln Gehn,</em> Berlin, 2002) and by Archinto (<em>Camminare nel Buio</em>, Milan, 2004). The volume of letters will be marketed in English. Current books-in-progress include the creative non-fiction, <em>Sweeping up the Heart,</em> a chapbook of poetry and a book on salons in cultural modernism.</p>
         <p>I have held grants from the National Endowment for the Humanities, American Council of Learned Societies, Getty Foundation, Ford Foundation (co-participant). In 1982, I was selected for a residency at the Rockefeller Center's Villa Serbelloni, Bellagio, Italy.</p>
       </div>
+      <div class="xp-extra reveal">
+        <div class="xp-gallery">
+          <figure><img src="images/xmas%2006%20%23190.jpeg" alt="Mary Lynn Broe with her Irish setters"></figure>
+          <figure><img src="images/image000000.jpeg" alt="Mary Lynn Broe's Irish setter"></figure>
+          <figure><img src="images/DSC00132.jpeg" alt="Mary Lynn Broe's Irish setter in the garden"></figure>
+          <figure><img src="images/IMG_1709.jpeg" alt="Mary Lynn Broe's Irish setter"></figure>
+          <figure><img src="images/DSC07129.jpeg" alt="Mary Lynn Broe with her Irish setter"></figure>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -349,11 +362,12 @@
           <img src="images/celticdesign1.svg" alt="">
         </div>
         <div class="xp-gallery">
-          <img src="images/mlbwithchild.png" alt="Mary Lynn Broe with child">
-          <img src="images/mlbwithfamily.png" alt="Mary Lynn Broe with family">
-          <img src="images/mlbwithdogsingarden.png" alt="Mary Lynn Broe with her dogs in the garden">
-          <img src="images/family2.jpg" alt="Broe family">
           <img src="images/DSC_0038.jpg" alt="Mary Lynn Broe">
+          <img src="images/family2.jpg" alt="Broe family">
+          <img src="images/mlbwithchild.png" alt="Mary Lynn Broe with child">
+          <img src="images/DSC00507.jpeg" alt="Broe family">
+          <img src="images/DSC00355.jpeg" alt="Mary Lynn Broe">
+          <img src="images/mlbwithfamily.png" alt="Mary Lynn Broe with family">
         </div>
       </div>
     </div>
@@ -468,6 +482,7 @@ Be seated at the piano. ("Mozart, 1935" by Wallace Stevens)</p>
           <figure><img src="images/dierdre11.jpg" alt="Miss Deirdre"><figcaption>Miss Deirdre</figcaption></figure>
           <figure><img src="images/mlb_olivia_and_medbh_at_rest.jpg" alt="Olivia and Medbh at rest"></figure>
           <figure><img src="images/all_five_martin_sisters_crop.gif" alt="The five Martin sisters"></figure>
+          <figure><img src="images/DSC08645%20(1).jpeg" alt="Mary Lynn Broe with her Irish setter"></figure>
         </div>
       </div>
     </div>
@@ -531,9 +546,10 @@ Be seated at the piano. ("Mozart, 1935" by Wallace Stevens)</p>
           <blockquote class="book-quote">". . .Mary Lynn Broe wishes to demythologize Plath, to rescue her from those who see her as a confessional poet. Broe shows us how, among other things, Plath turned to a cache of women's myths — to images of pregnancy, stillbirth, abortion, aging — and wryly inverted them. . . Maturing, Plath identifies even less with sheep and more with the lioness. 'Give me back my shape,' she cries out. . . Broe convincingly describes Plath's maturation as a poet. . .precisely as scholarship should, this book renews one's delight in its subject."<cite>Joan Joffe Hall, "Laing and Plath: Dismissing One Poet, Demythologizing Another," Feb. 26, 1981</cite></blockquote>
         </div>
       </div>
-      <figure class="books-closer reveal">
-        <img src="images/denverbullet03.jpg" alt="Mary Lynn Broe">
-      </figure>
+      <div class="books-closer-row reveal">
+        <figure><img src="images/denverbullet03.jpg" alt="Mary Lynn Broe"></figure>
+        <figure><img src="images/mlbwithdogsingarden.png" alt="Mary Lynn Broe with her dogs in the garden"></figure>
+      </div>
     </div>
   </section>
 
@@ -820,8 +836,15 @@ For metric calisthenics."</blockquote>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
     const nav = document.getElementById('nav');
-    const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 30);
-    window.addEventListener('scroll', onScroll, { passive:true }); onScroll();
+    let navTicking = false;
+    const updateNav = () => {
+      const y = window.scrollY;
+      if (y > 40) nav.classList.add('scrolled');
+      else if (y < 20) nav.classList.remove('scrolled');
+      navTicking = false;
+    };
+    const onScroll = () => { if (!navTicking) { navTicking = true; requestAnimationFrame(updateNav); } };
+    window.addEventListener('scroll', onScroll, { passive:true }); updateNav();
     const hamburger = document.getElementById('hamburger'), navMobile = document.getElementById('navMobile');
     hamburger.addEventListener('click', () => { hamburger.classList.toggle('open'); navMobile.classList.toggle('open'); });
     navMobile.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { hamburger.classList.remove('open'); navMobile.classList.remove('open'); }));
