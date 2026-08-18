@@ -15,10 +15,6 @@ images/             Portraits, book covers, and gallery photos
 DEPLOY.md           Step-by-step deployment guide
 ```
 
-## Sections
-
-Hero · Biography · Books · Scholarship (essays, papers, grants) · Courses · Gallery · Contact
-
 ## Editing
 
 Everything lives in `index.html`. Edit text or styles there and re-commit; GitHub Pages
